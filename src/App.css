@@ -5,3 +5,9 @@
     box-shadow: -10px 10px 100px #6315d7;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+nav {
+  z-index: 10001 !important;
+}
