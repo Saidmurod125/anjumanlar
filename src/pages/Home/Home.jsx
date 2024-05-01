@@ -1,7 +1,10 @@
-
+import Data from "../../components/Data"
 const Home = () => {
   return (
-    <>home</>
+    <>
+     <Data/>
+    
+    </>
   );
 };
 
