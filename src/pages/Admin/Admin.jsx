@@ -1,4 +1,4 @@
-import { MuiTable } from "./anjumanlar/Table";
+import { MuiTable } from "./anjumanlar/Tabel";
 
 import React from 'react'
 

@@ -47,8 +47,6 @@ function Navbar() {
         <i className="fa-solid fa-user"></i>
          <span>Kirish</span>
         </NavLink>
-        <a href="/" className='items-center hidden lg:flex hover:text-secoundary'><GrLanguage className='mr-2'/>Language</a>
-        <button className='px-4 py-2 transition-all duration-300 rounded bg-secoundary hover:bg-indigo-600 hover:text-secoundary'>Sign up</button>
       </div>
       <div className='md:hidden'>
     <button onClick={toggleMenu} className='text-white focus:outline-none focus:text-gray-300'>
