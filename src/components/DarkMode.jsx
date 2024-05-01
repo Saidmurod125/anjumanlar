@@ -11,7 +11,7 @@ const DarkMode = () => {
 
   return (
     <button
-      className={`right-4 gap-2 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-800 dark:text-white  rounded-full border-none  focus:outline-none`}
+      className={`right-4 gap-2 flex items-center justify-center bg-white dark:bg-gray-800 text-gray-800 dark:text-white  rounded-full border-none  focus:outline-none`}
       onClick={toggleDarkMode}
     >
   <span className="fa-solid fa-moon" />

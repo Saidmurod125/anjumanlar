@@ -1,11 +1,15 @@
+
+import { MuiTable } from "./anjumanlar/Tabel";
+
 import React from 'react'
 
 const Admin = () => {
   return (
     <div>
-      admin
+      <MuiTable/>
     </div>
   )
 }
 
 export default Admin
+
