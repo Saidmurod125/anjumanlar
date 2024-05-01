@@ -69,17 +69,17 @@ export const Carousel = () => {
     };
 
     return (
-        <div className='mt-[100px] w-full'>
+        <div className='mt-[100px] w-full dark:text-white  dark:bg-gray-900'>
             <div className='flex flex-wrap w-[90%] mx-auto gap-10 justify-around items-center'>
                 <button className={`w-[60px] h-[60px] cursor-pointer transition-all duration-300 rounded-full border-2 border-gray-500 ${isPrevDisabled ? 'bg-[#088269]' : ''}`} onClick={handlePrevClick} disabled={isPrevDisabled}>
                     <i className="fa-solid fa-arrow-left"></i>
                 </button>
-                {mainCard.slice(startIndex, startIndex + 3).map((item, index) => (
+                {mainCard.slice(startIndex, startIndex + 2).map((item, index) => (
                     <div key={index} className='rounded-lg border-2 transition-all duration-800 hover:shadow-lg w-[450px] h-[300px] flex justify-center items-center flex-col cursor-pointer'>
                         <img src={item.img} alt="" className='w-[100px] rounded-full h-[100px]' />
                         <h2 className='capitalize h-[50px] mt-3 ml-2 font-semibold text-[15px] mb-3 text-center'>{item.text}</h2>
-                        <h4 className='text-[#404040] text-[16px] font-normal'>{item.addres}</h4>
-                        <p className='text-[#404040] font-normal text-[16px] capitalize'>{item.practice}</p>
+                        <h4 className='text-[#404040] text-[16px] font-normal dark:text-white'>{item.addres}</h4>
+                        <p className='text-[#404040] font-normal dark:text-white text-[16px] capitalize'>{item.practice}</p>
                     </div>
                 ))}
                 <button className={`w-[60px] h-[60px] cursor-pointer transition-all duration-300  rounded-full border-2 border-gray-500 ${isNextDisabled ? 'bg-[#088269]' : ''}`} onClick={handleNextClick} disabled={isNextDisabled}>
