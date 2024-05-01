@@ -3,7 +3,6 @@ import  { useState } from 'react';
 import { FaBars, FaXmark } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 import DarkMode from './DarkMode';
-import { GrLanguage } from 'react-icons/gr';
 
 
 function Navbar() {
@@ -34,15 +33,15 @@ function Navbar() {
         <ul className='hidden space-x-12 md:flex'>
           {navItems.map(({ link, path }) => (
             <li key={link}>
-              <a href={path} className="block hover:text-gray-300">
+              <NavLink to={path} className="block hover:text-gray-300">
                 {link}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
       </div>
       <div className='items-center hidden space-x-12 md:flex'>
-        <a href="/" className='items-center hidden lg:flex hover:text-secoundary'><GrLanguage className='mr-2'/>Language</a>
+        <DarkMode/>
         <button className='px-4 py-2 transition-all duration-300 rounded bg-secoundary hover:bg-indigo-600 hover:text-secoundary'>Sign up</button>
       </div>
       <div className='md:hidden'>
@@ -58,9 +57,9 @@ function Navbar() {
     {
         navItems.map(({ link, path }) => (
             <li  key={link}>
-              <a href={path} className="block hover:text-gray-300">
+              <NavLink to={path} className="block hover:text-gray-300">
                 {link}
-              </a>
+              </NavLink>
             </li>
           ))  
     }
