@@ -74,7 +74,7 @@ export const Carousel = () => {
                 <button className={`w-[60px] h-[60px] cursor-pointer transition-all duration-300 rounded-full border-2 border-gray-500 ${isPrevDisabled ? 'bg-[#088269]' : ''}`} onClick={handlePrevClick} disabled={isPrevDisabled}>
                     <i className="fa-solid fa-arrow-left"></i>
                 </button>
-                {mainCard.slice(startIndex, startIndex + 2).map((item, index) => (
+                {mainCard.slice(startIndex, startIndex + 3).map((item, index) => (
                     <div key={index} className='rounded-lg border-2 transition-all duration-800 hover:shadow-lg w-[450px] h-[300px] flex justify-center items-center flex-col cursor-pointer'>
                         <img src={item.img} alt="" className='w-[100px] rounded-full h-[100px]' />
                         <h2 className='capitalize h-[50px] mt-3 ml-2 font-semibold text-[15px] mb-3 text-center'>{item.text}</h2>
