@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
    <>
-    <nav className='fixed top-0 left-0 right-0 min-h-screen p-4 mx-auto bg-white dark:text-white md:px-14 max-w-screen-2xl dark:bg-gray-900 '>
+    <nav className='top-0 left-0 right-0 p-4 mx-auto bg-white  dark:text-white md:px-14 max-w-screen-2xl dark:bg-gray-900'>
     <div className='container flex items-center justify-between mx-auto text-lg font-medium '>
     <div className='flex items-center gap-12 space-x-14'>
         <a
@@ -42,7 +42,7 @@ function Navbar() {
       </div>
       <div className='items-center hidden space-x-12 md:flex'>
         <DarkMode/>
-        <button className='px-4 py-2 transition-all duration-300 rounded bg-secoundary hover:bg-indigo-600 hover:text-secoundary'>Sign up</button>
+        <NavLink to="/login" className='px-4 py-2 transition-all duration-300 rounded bg-secoundary hover:bg-indigo-600 hover:text-secoundary'>Sign up</NavLink>
       </div>
       <div className='md:hidden'>
     <button onClick={toggleMenu} className='text-white focus:outline-none focus:text-gray-300'>
