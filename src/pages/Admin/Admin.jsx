@@ -1,8 +1,8 @@
 
 const Admin = () => {
   return (
-    <div>
-      
+    <div className="mt-20">
+      admin123    
     </div>
   )
 }
