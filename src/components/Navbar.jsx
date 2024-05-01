@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
    <div className='relative shadow-sm bg-g ray-400 w-32full h-[65px] z-12 bg-opacity-80'>
-    <nav className='fixed top-0 left-0 right-0 p-4 mx-auto bg-white dark:text-white md:px-14 max-w-screen-2xl dark:bg-gray-900'>
+    <nav className='fixed top-0 left-0 right-0 p-4 mx-auto bg-white dark:text-white md:px-14 max-w-screen-2xl dark:bg-gray-800'>
     <div className='container flex items-center justify-between mx-auto font-medium top-12 '>
     <div className='flex items-center gap-12 space-x-14'>
         <NavLink

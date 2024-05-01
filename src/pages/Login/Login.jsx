@@ -21,7 +21,7 @@ if (isLoggedIn) {
    
   } else{
     return (
-        <div className="container relative mx-auto mt-14 dark:text-white ">
+        <div className="container relative h-[83vh]  mx-auto mt-14 dark:text-white ">
            <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8 dark:bg-gray-900">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <img
