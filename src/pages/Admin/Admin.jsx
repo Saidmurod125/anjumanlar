@@ -1,10 +1,13 @@
+import { MuiTable } from "./anjumanlar/Table";
 
 const Admin = () => {
   return (
     <div>
-      admin
-    </div>
-  )
-}
 
-export default Admin
+      <MuiTable />
+
+    </div>
+  );
+};
+
+export default Admin;
