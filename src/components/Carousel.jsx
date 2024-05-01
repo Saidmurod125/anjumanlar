@@ -70,7 +70,7 @@ export const Carousel = () => {
 
     return (
         <div className='mt-[100px] w-full dark:text-white  dark:bg-gray-900'>
-            <div className='flex flex-wrap w-[90%] mx-auto gap-10 justify-around items-center'>
+            <div className='flex  w-[90%] mx-auto gap-10 justify-around items-center'>
                 <button className={`w-[60px] h-[60px] cursor-pointer transition-all duration-300 rounded-full border-2 border-gray-500 ${isPrevDisabled ? 'bg-[#088269]' : ''}`} onClick={handlePrevClick} disabled={isPrevDisabled}>
                     <i className="fa-solid fa-arrow-left"></i>
                 </button>
