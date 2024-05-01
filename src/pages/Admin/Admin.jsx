@@ -1,17 +1,14 @@
 import { MuiTable } from "./anjumanlar/Table";
 
+import React from 'react'
+
 const Admin = () => {
   return (
-
-    <div className="mt-20">
-
     <div>
-
-      <MuiTable />
-
-
+      <MuiTable/>
     </div>
-  );
-};
+  )
+}
 
-export default Admin;
+export default Admin
+
