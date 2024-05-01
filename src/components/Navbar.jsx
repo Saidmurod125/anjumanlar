@@ -2,6 +2,7 @@ import  { useState } from 'react';
 import { FaBars, FaXmark } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 import DarkMode from './DarkMode';
+import { GrLanguage } from 'react-icons/gr';
 
 
 function Navbar() {
@@ -40,11 +41,14 @@ function Navbar() {
         </ul>
       </div>
       <div className='items-center hidden space-x-12 md:flex'>
+
       <DarkMode/>
         <NavLink to="/login" className='flex items-center gap-4 duration-300 rounded ittransition-all'>
         <i className="fa-solid fa-user"></i>
          <span>Kirish</span>
         </NavLink>
+        <a href="/" className='items-center hidden lg:flex hover:text-secoundary'><GrLanguage className='mr-2'/>Language</a>
+        <button className='px-4 py-2 transition-all duration-300 rounded bg-secoundary hover:bg-indigo-600 hover:text-secoundary'>Sign up</button>
       </div>
       <div className='md:hidden'>
     <button onClick={toggleMenu} className='text-white focus:outline-none focus:text-gray-300'>
