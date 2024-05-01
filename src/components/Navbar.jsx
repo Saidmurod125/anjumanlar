@@ -20,9 +20,9 @@ function Navbar() {
 
   return (
    <>
-    <nav className='fixed top-0 left-0 right-0 min-h-screen p-4 mx-auto bg-white dark:text-white md:px-14 max-w-screen-2xl dark:bg-gray-900'>
-    <div className='container flex items-center justify-between mx-auto text-lg font-medium'>
-    <div className='flex items-center space-x-12'>
+    <nav className='fixed top-0 left-0 right-0 min-h-screen p-4 mx-auto bg-white dark:text-white md:px-14 max-w-screen-2xl dark:bg-gray-900 '>
+    <div className='container flex items-center justify-between mx-auto text-lg font-medium '>
+    <div className='flex items-center gap-12 space-x-14'>
         <a
           href="/"
           className="flex items-center space-x-3 text-2xl font-semibold text-primary"
