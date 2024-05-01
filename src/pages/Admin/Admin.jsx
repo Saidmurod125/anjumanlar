@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Outlet } from "react-router";
 import Sidebar from "./Sidebar";
 const Admin = () => {
@@ -5,8 +6,19 @@ const Admin = () => {
     <div>
       <Sidebar />
       <Outlet />
-    </div>
-  );
-};
+=======
+import { MuiTable } from "./anjumanlar/Tabel";
 
-export default Admin;
+import React from 'react'
+
+const Admin = () => {
+  return (
+    <div>
+      <MuiTable/>
+>>>>>>> 0267fa547210e0a82b0ea1eb36b595ae358bcd4d
+    </div>
+  )
+}
+
+export default Admin
+
