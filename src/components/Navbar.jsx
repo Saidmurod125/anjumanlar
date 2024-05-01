@@ -22,19 +22,19 @@ function Navbar() {
     <nav className='fixed top-0 left-0 right-0 p-4 mx-auto bg-white dark:text-white md:px-14 max-w-screen-2xl dark:bg-gray-900'>
     <div className='container flex items-center justify-between mx-auto font-medium top-12 '>
     <div className='flex items-center gap-12 space-x-14'>
-        <a
-          href="/"
+        <NavLink
+          to="/"
           className="flex items-center space-x-3 text-2xl font-semibold text-primary"
         >
           <img className="inline-block w-22" src='https://anjumanlar.uz/logo.svg' alt="" />
           
-        </a>
+        </NavLink>
         <ul className='hidden space-x-12 md:flex'>
           {navItems.map(({ link, path }) => (
             <li key={link}>
-              <a href={path} className="block hover:text-gray-300">
+              <NavLink to={path} className="block hover:text-gray-300">
                 {link}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
