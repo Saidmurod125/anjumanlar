@@ -1,7 +1,4 @@
-
 import { MuiTable } from "./anjumanlar/Tabel";
-
-import React from 'react'
 
 const Admin = () => {
   return (
