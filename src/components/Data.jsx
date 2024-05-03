@@ -47,15 +47,15 @@ function Data() {
     return (
         <div className=''>
             {currentAnjumanlar.map((conference) => (
-                <ConferenceCard key={conference.id} conference={conference} />
+                <ConferenceCard  key={conference.id} conference={conference} />
             ))}
 
-            <Stack direction="row" justifyContent="center" mt={4}>
-                <Pagination
+            <Stack direction="row" justifyContent="center" mt={2}>
+                <Pagination 
                     count={totalPages} 
                     page={currentPage} 
                     onChange={handlePageChange} 
-                    color="primary" 
+                    color="primary"
                 />
             </Stack>
         </div>

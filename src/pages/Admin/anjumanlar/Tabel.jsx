@@ -10,7 +10,8 @@ import {
   TablePagination,
   Button,
 } from "@mui/material";
-import FormDialog from "./MuiModal";
+import FormDialog from "./Modal";
+// import FormDialog from "./Modal";
 
 export const MuiTable = () => {
   const [page, setPage] = useState(0);

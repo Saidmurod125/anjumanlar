@@ -11,7 +11,8 @@ const DarkMode = () => {
 
   return (
     <button
-      className={`right-4 gap-3 flex items-center justify-center px-4 py-2  text-gray-900 dark:text-white rounded-full border-none focus:outline-none transition-colors duration-300`}
+
+      className={`right-4 gap-2 flex items-center justify-center bg-white dark:bg-gray-800 text-gray-800 dark:text-white  rounded-full border-none  focus:outline-none`}
       onClick={toggleDarkMode}
     >
       {darkMode ? <FaSun size={16} /> : <FaMoon size={14} />}

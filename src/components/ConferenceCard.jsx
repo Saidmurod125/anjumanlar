@@ -1,8 +1,9 @@
 function ConferenceCard({ conference }) {
     return (
-        <div className="container px-2 mx-auto mt-12 mb-6 col-tspan-12 sm:col-span-12">
-            <div className="flex items-center py-8 bg-white rounded-lg box-shadowed ps-6 sm:ps-8 md:ps-10 lg:ps-12 xl:ps-20">
-                <div className="flex w-full">
+
+        <div className="container px-2 mx-auto mt-8 mb-10 col-tspan-12 sm:col-span-12">
+            <div className="flex items-center py-10 bg-white dark:bg-gray-800 dark:text-white box-shadowed ps-6 sm:ps-8 md:ps-10 dark:shadow-2xl lg:ps-12 xl:ps-20 rounded-xl">
+                <div className="flex w-95">
                     <img
                         className="w-24 my-auto rounded-full h-22 sm:me-8 bg-opacity-primary"
                         src="https://anjumanlar.uz/storage/eDX7MqHMdazFjI4uVoQOutNBp3DYwH77BFT4HFfO.jpg"
