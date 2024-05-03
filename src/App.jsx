@@ -6,7 +6,6 @@ import './App.css'
 import Login from "./pages/Login/Login"
 import Admin from "./pages/Admin/Admin"
 
-
 const App = () => {
 
   const routes = createBrowserRouter(

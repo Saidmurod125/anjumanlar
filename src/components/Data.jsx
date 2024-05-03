@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import ConferenceCard from './ConferenceCard'; 
 import Pagination from '@mui/material/Pagination';
+
+
+
+
+
 import Stack from '@mui/material/Stack';
 
 function Data() {
@@ -40,7 +45,7 @@ function Data() {
     const currentAnjumanlar = anjumanlar.slice(startIndex, startIndex + itemsPerPage); 
 
     return (
-        <div>
+        <div className=''>
             {currentAnjumanlar.map((conference) => (
                 <ConferenceCard key={conference.id} conference={conference} />
             ))}
