@@ -56,18 +56,18 @@ export const MuiTable = () => {
   };
 
   return (
-    <>
+    <div className="container justify-end mx-auto ">
       {loading ? (
         <h1>Loading.....</h1>
       ) : (
         <div>
           <Box
             display="flex"
-            justifyContent="space-between"
+            justifyContent="flex-end"
             alignItems="center"
+            margin={5}
           >
-            <p>Yangi anjuman qo'shish</p>
-            <Button
+            <Button 
               variant="contained"
               onClick={() => handleClickOpen("Add", null)}
             >
@@ -147,6 +147,6 @@ export const MuiTable = () => {
           />
         </div>
       )}
-    </>
+    </div>
   );
 };
