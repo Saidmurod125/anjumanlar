@@ -50,6 +50,7 @@ function Menu() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="max-w-[1570px] h-[780px] w-full m-auto py-10 px-4 relative group">
       <h1 className="mb-6 text-xl font-medium text-center dark:text-white">
         SAYT TEST REJIMIDA ISHLAMOQDA{" "}
@@ -101,6 +102,11 @@ function Menu() {
         ))}
       </div>
     </div>
+=======
+  <>
+    menyu
+  </>
+>>>>>>> c4ab4596ad5c6dc167d64a489560f5b95822dcd5
   );
 }
 
