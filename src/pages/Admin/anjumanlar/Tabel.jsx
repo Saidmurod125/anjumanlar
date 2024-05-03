@@ -10,7 +10,7 @@ import {
   TablePagination,
   Button,
 } from "@mui/material";
-import FormDialog from "./MuiModal";
+import FormDialog from "./Modal";
 
 export const MuiTable = () => {
   const [page, setPage] = useState(0);
@@ -30,7 +30,7 @@ export const MuiTable = () => {
   };
 
   return (
-    <div>
+    <>
       <div style={{display:"flex",justifyContent:"space-between"}}>
         <p>Yangi anjuman qo'shish</p>
         <Button variant="contained" onClick={handleClickOpen}>Add</Button>
@@ -89,7 +89,7 @@ export const MuiTable = () => {
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
-    </div>
+    </>
   );
 };
 
