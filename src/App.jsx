@@ -1,3 +1,4 @@
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -10,7 +11,6 @@ import About from "./pages/About/About";
 import Login from "./pages/Login/Login";
 import Admin from "./pages/Admin/Admin";
 import Layout from "./layout/layout";
-
 const App = () => {
   const routes = createBrowserRouter(
     createRoutesFromElements(
