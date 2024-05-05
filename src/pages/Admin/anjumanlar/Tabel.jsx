@@ -12,8 +12,12 @@ import {
   Box,
 } from "@mui/material";
 import FormDialog from "./Modal";
+<<<<<<< HEAD
 import useAxios from "../../../service/useAxios";
 import Loader from "../../../components/Loader";
+=======
+// import FormDialog from "./Modal";
+>>>>>>> 39a1727e6b16f63c169b04c978bd5c10ddda0235
 
 export const MuiTable = () => {
   const [page, setPage] = useState(0);
@@ -57,6 +61,7 @@ export const MuiTable = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="container justify-end mx-auto ">
       {loading ? (
  <Loader/>
@@ -95,59 +100,67 @@ export const MuiTable = () => {
                   <TableCell align="center">Time</TableCell>
                   <TableCell align="center">Place</TableCell>
                   <TableCell align="center">Action</TableCell>
+=======
+    <div>
+      <div style={{display:"flex",justifyContent:"space-between"}}>
+        <p>Yangi anjuman qo'shish</p>
+        <Button variant="contained" onClick={handleClickOpen}>Add</Button>
+      </div>
+      <FormDialog open={open} setOpen={setOpen} />
+      <TableContainer component={Paper}>
+        <Table stickyHeader aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell align="center">Id</TableCell>
+              <TableCell align="center">Name</TableCell>
+              <TableCell align="center">Time</TableCell>
+              <TableCell align="center">Place</TableCell>
+              <TableCell align="center">Action</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {anjumanlar
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((row) => (
+                <TableRow
+                  key={row.id}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell align="center">{row.id}</TableCell>
+                  <TableCell align="center">{row.nomi}</TableCell>
+                  <TableCell align="center">{row.vaqti}</TableCell>
+                  <TableCell align="center">{row.joyi}</TableCell>
+                  <TableCell
+                    align="center"
+                    sx={{
+                      display: "flex",
+                      fontSize: "16px",
+                      justifyContent: "center",
+                      gap: "4px",
+                    }}
+                  >
+                    <Button onClick={handleClickOpen} variant="contained">
+                      Edit
+                    </Button>
+                    <Button color="error" variant="contained">
+                      Delete
+                    </Button>
+                  </TableCell>
+>>>>>>> 39a1727e6b16f63c169b04c978bd5c10ddda0235
                 </TableRow>
-              </TableHead>
-              <TableBody>
-                {anjumanlar &&
-                  anjumanlar
-                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                    .map((row) => (
-                      <TableRow key={row.id}>
-                        <TableCell align="center">{row.id}</TableCell>
-                        <TableCell align="center">{row.name}</TableCell>
-                        <TableCell align="center">{row.date}</TableCell>
-                        <TableCell align="center">{row.place}</TableCell>
-                        <TableCell
-                          sx={{
-                            display: "flex",
-                            gap: "8px",
-                            justifyContent: "center",
-                          }}
-                          align="center"
-                        >
-                          <Button
-                            onClick={() => {
-                              setSelectedAnjuman(row);
-                              handleClickOpen("Edit", row);
-                            }}
-                            variant="contained"
-                          >
-                            Edit
-                          </Button>
-                          <Button
-                            onClick={() => handleDeleteConfirm(row)}
-                            variant="contained"
-                            color="error"
-                          >
-                            Delete
-                          </Button>
-                        </TableCell>
-                      </TableRow>
-                    ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <TablePagination
-            rowsPerPageOptions={[4]}
-            component="div"
-            count={anjumanlar?.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
-        </div>
-      )}
+              ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[4]}
+        component="div"
+        count={anjumanlar.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
     </div>
   );
 };
