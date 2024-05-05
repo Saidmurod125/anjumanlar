@@ -49,7 +49,7 @@ function Menu() {
   };
 
   return (
-    <div className="max-w-[1570px] h-[780px] w-full m-auto py-10 px-4 relative group">
+    <div className="max-w-[1570px] h-[780px] w-full m-auto py-10 px-4 relative group mt-14">
       <h1 className="mb-6 text-xl font-medium text-center dark:text-white">
         SAYT TEST REJIMIDA ISHLAMOQDA{" "}
       </h1>
@@ -86,13 +86,13 @@ function Menu() {
         <BsChevronCompactRight size={30} />
       </div>
 
-      <div className="flex justify-center py-2 top-4">
+      <div className="flex justify-center py-2">
         {slides.map((slide, slideIndex) => (
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
             className={` cursor-pointer text-4xl ${
-              currentIndex === slideIndex ? "text-primary" : "text-gray-200"
+              currentIndex === slideIndex ? "text-primary" : "text-gray-500"
             }`}
           >
             <IoRemoveOutline />

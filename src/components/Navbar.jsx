@@ -19,8 +19,8 @@ function Navbar() {
 
   return (
 
-   <>
-    <nav className='top-0 left-0 right-0 p-4 mx-auto bg-white dark:text-white md:px-14 max-w-screen-2xl dark:bg-gray-800'>
+   <div className='relative z-10 w-full bg-white shadow-sm md:flex'>
+    <nav className='fixed top-0 left-0 right-0 p-4 mx-auto bg-white dark:text-white md:px-14 max-w-screen-2xl dark:bg-gray-800'>
     <div className='container flex items-center justify-between mx-auto text-lg font-medium '>
 
     <div className='flex items-center gap-12 space-x-14'>
@@ -53,7 +53,7 @@ function Navbar() {
       <div className='md:hidden'>
     <button onClick={toggleMenu} className='text-white focus:outline-none focus:text-gray-300'>
         {
-            isMenuOpen ? (<FaXmark className='w-6 h-6 text-primary'/>) : (<FaBars className='w-6 h-6 text-primary'/>)
+            isMenuOpen ? (<FaXmark className='w-6 h-6 text-primary'/>) : (<FaBars className='z-50 w-6 h-6 text-primary'/>)
         }
     </button>
       </div>
@@ -62,7 +62,7 @@ function Navbar() {
     <div className={` space-y-4 px-6 pt-24 text-xl text-center  pb-5  bg-secoundary ${isMenuOpen ? " z-50 fixed  block  top-2  right-0 left-0 " : "hidden"} `}>
     {
         navItems.map(({ link, path }) => (
-            <li  key={link}>
+            <li className='list-none '  key={link}>
               <NavLink to={path} className="block hover:text-gray-300">
 
                 {link}
@@ -71,7 +71,7 @@ function Navbar() {
           ))  
     }
     </div>
-    </>
+    </div>
   );
 }
 
