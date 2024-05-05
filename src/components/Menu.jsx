@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { RxDotFilled } from "react-icons/rx";
 import { IoRemoveOutline } from "react-icons/io5";
 
 function Menu() {
@@ -50,7 +49,11 @@ function Menu() {
   };
 
   return (
+<<<<<<< HEAD
+    <div className="max-w-[1570px] h-[780px] w-full m-auto py-10 px-4 relative group mt-14">
+=======
     <div className="max-w-[1570px] h-[780px] w-full m-auto py-10 px-4 relative group">
+>>>>>>> 47f8ca85f8d6d9bf3b885dd63432fce4e0547d44
       <h1 className="mb-6 text-xl font-medium text-center dark:text-white">
         SAYT TEST REJIMIDA ISHLAMOQDA{" "}
       </h1>
@@ -87,13 +90,13 @@ function Menu() {
         <BsChevronCompactRight size={30} />
       </div>
 
-      <div className="flex justify-center py-2 top-4">
+      <div className="flex justify-center py-2">
         {slides.map((slide, slideIndex) => (
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
             className={` cursor-pointer text-4xl ${
-              currentIndex === slideIndex ? "text-primary" : "text-gray-200"
+              currentIndex === slideIndex ? "text-primary" : "text-gray-500"
             }`}
           >
             <IoRemoveOutline />
