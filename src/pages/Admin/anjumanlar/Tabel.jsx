@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
+  Button,
   TableContainer,
   Table,
   TableHead,
@@ -8,29 +9,54 @@ import {
   TableCell,
   Paper,
   TablePagination,
-  Button,
+  Box,
 } from "@mui/material";
 import FormDialog from "./Modal";
+// import FormDialog from "./Modal";
 
 export const MuiTable = () => {
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(4);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
   const [open, setOpen] = useState(false);
+  const [editOrDelete, setEditOrDelete] = useState(false);
+  const [selectedAnjuman, setSelectedAnjuman] = useState(null);
+  const [anjumanlar, setAnjumanlar] = useState([]);
+  const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
 
-  const handleClickOpen = () => {
+  const { data, loading } = useAxios(
+    "https://6634d6199bb0df2359a2e7ca.mockapi.io/conference/conference"
+  );
+
+  useEffect(() => {
+    if (data) {
+      setAnjumanlar(data);
+    }
+  }, [data]);
+
+  const handleClickOpen = (e, data) => {
     setOpen(true);
+    setEditOrDelete(e === "Add" ? false : true);
+    setSelectedAnjuman(data);
   };
+
+  const handleDeleteConfirm = (e) => {
+    setSelectedAnjuman(e);
+    setDeleteConfirmOpen(true);
+  };
+
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
-
+  const handleDeleteCancel = () => {
+    setDeleteConfirmOpen(false);
+  };
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
 
   return (
-    <>
+    <div>
       <div style={{display:"flex",justifyContent:"space-between"}}>
         <p>Yangi anjuman qo'shish</p>
         <Button variant="contained" onClick={handleClickOpen}>Add</Button>
@@ -89,69 +115,6 @@ export const MuiTable = () => {
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
-    </>
+    </div>
   );
 };
-
-const anjumanlar = [
-  {
-    id: 1,
-    nomi: "Davlat boshqaruvchilarining majlisi",
-    vaqti: "2024-05-10 14:00",
-    joyi: "Davlat palatasi, Toshkent",
-  },
-  {
-    id: 2,
-    nomi: "Texnikachilar ittifoqi anjumani",
-    vaqti: "2024-06-15 09:30",
-    joyi: "Texnikachilar markazi, Samarqand",
-  },
-  {
-    id: 3,
-    nomi: "Xalqaro innovatsiya forumi",
-    vaqti: "2024-07-20 10:00",
-    joyi: "Dunyo siyosiy va madaniy markazi, Xiva",
-  },
-  {
-    id: 4,
-    nomi: "IT kengashining yig'ilishi",
-    vaqti: "2024-08-05 11:30",
-    joyi: "Innovatsion texnologiyalar markazi, Andijon",
-  },
-  {
-    id: 5,
-    nomi: "Dunyo ta'lim muassasalarining birligi",
-    vaqti: "2024-09-18 13:45",
-    joyi: "Mamlakatimizning ta'lim markazi, Namangan",
-  },
-  {
-    id: 6,
-    nomi: "Oliy o'quv yurtlarining rektoral ko'ngili",
-    vaqti: "2024-10-30 15:20",
-    joyi: "Toshkent davlat yuridik universiteti, Toshkent",
-  },
-  {
-    id: 7,
-    nomi: "Turizm sohasi yuksalishining eng yaxshi yo'nalishlari",
-    vaqti: "2024-11-14 09:00",
-    joyi: "Turizm texnologiyalari markazi, Bukhoro",
-  },
-  {
-    id: 8,
-    nomi: "Mehnat va ma'naviyat kengashi",
-    vaqti: "2024-12-22 10:30",
-    joyi: "Mehnat va ma'naviyat markazi, Qarshi",
-  },
-  {
-    id: 9,
-    nomi: "Iqtisodiyotning rivojlanishi strategiyasi",
-    vaqti: "2025-01-08 12:15",
-    joyi: "Iqtisodiyotni rivojlantirish markazi, Urganch",
-  },
-  {
-    id: 10,
-    nomi: "O'zbekistonning 30-yilligi munosabati bilan tanlov",
-    vaqti: "2025-02-20 14:45",
-    joyi: "Davlat milliy teatri, Toshkent",
-  },
-];

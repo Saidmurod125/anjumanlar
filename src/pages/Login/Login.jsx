@@ -22,6 +22,7 @@ const Login = () => {
     window.location.href = "/admin";
   } else {
     return (
+<<<<<<< HEAD
       <>
         <div className="container relative mx-auto  dark:text-white h-[80vh] bg-white  px-4 rounded-xl mt-24">
           <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8 dark:bg-gray-700">
@@ -35,6 +36,34 @@ const Login = () => {
                 ScienceIDga Xush kelibsiz !
               </h2>
             </div>
+=======
+        <div className="container relative mx-auto mt-14 dark:text-white h-[80vh] ">
+           <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8 dark:bg-gray-900">
+          <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+            <img
+              className="w-auto h-10 mx-auto"
+              src="https://anjumanlar.uz/logo.svg"
+              alt="Your Company"
+            />
+            <h2 className="mt-10 text-2xl font-bold leading-9 tracking-tight text-center text-gray-900 dark:text-white">
+              Sign in to your account
+            </h2>
+          </div>
+  
+          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <form className="space-y-6" action="#" method="POST">
+              <div>
+                
+                <div className="mt-2">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    value={username}
+          onChange={(e) => setUsername(e.target.value)}
+>>>>>>> 47f8ca85f8d6d9bf3b885dd63432fce4e0547d44
 
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
               <form className="space-y-6" action="#" method="POST">
