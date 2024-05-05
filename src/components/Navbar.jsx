@@ -2,7 +2,6 @@ import  { useState } from 'react';
 import { FaBars, FaXmark } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 import DarkMode from './DarkMode';
-import { GrLanguage } from 'react-icons/gr';
 
 
 function Navbar() {
@@ -19,9 +18,11 @@ function Navbar() {
   ];
 
   return (
-   <div className='relative shadow-sm bg-g ray-400 w-32full h-[65px] z-12 bg-opacity-80'>
-    <nav className='fixed top-0 left-0 right-0 p-4 mx-auto bg-slate-50 dark:text-white md:px-14 max-xl:flex max-w-screen-2xl dark:bg-gray-700'>
-    <div className='container flex items-center justify-between mx-auto font-medium top-12 '>
+
+   <>
+    <nav className='top-0 left-0 right-0 p-4 mx-auto bg-white dark:text-white md:px-14 max-w-screen-2xl dark:bg-gray-800'>
+    <div className='container flex items-center justify-between mx-auto text-lg font-medium '>
+
     <div className='flex items-center gap-12 space-x-14'>
         <NavLink
           to="/"
@@ -42,13 +43,12 @@ function Navbar() {
       </div>
       <div className='items-center hidden space-x-12 md:flex'>
 
+
       <DarkMode/>
         <NavLink to="/login" className='flex items-center gap-4 duration-300 rounded ittransition-all'>
         <i className="fa-solid fa-user"></i>
          <span>Kirish</span>
         </NavLink>
-        <a href="/" className='items-center hidden lg:flex hover:text-secoundary'><GrLanguage className='mr-2'/>Language</a>
-        <button className='px-4 py-2 transition-all duration-300 rounded bg-secoundary hover:bg-indigo-600 hover:text-secoundary'>Sign up</button>
       </div>
       <div className='md:hidden'>
     <button onClick={toggleMenu} className='text-white focus:outline-none focus:text-gray-300'>
@@ -62,15 +62,16 @@ function Navbar() {
     <div className={` space-y-4 px-6 pt-24 text-xl text-center  pb-5  bg-secoundary ${isMenuOpen ? " z-50 fixed  block  top-2  right-0 left-0 " : "hidden"} `}>
     {
         navItems.map(({ link, path }) => (
-            <li className='list-none '  key={link}>
-              <a href={path} className="block hover:text-gray-300">
+            <li  key={link}>
+              <NavLink to={path} className="block hover:text-gray-300">
+
                 {link}
-              </a>
+              </NavLink>
             </li>
           ))  
     }
     </div>
-   </div>
+    </>
   );
 }
 

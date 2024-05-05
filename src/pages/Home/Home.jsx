@@ -1,12 +1,12 @@
+import Carousel from "../../components/Carousel";
 import Data from "../../components/Data"
-import Menu from "../../components/Menu";
 const Home = () => {
   return (
-    <>
-    <Menu/>
+
+    <div className="container mx-auto" >
      <Data/>
-    
-    </>
+    <Carousel />
+    </div>
   );
 };
 
