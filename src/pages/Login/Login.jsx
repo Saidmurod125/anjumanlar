@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 import { useState } from "react";
-import DarkMode from "../../components/DarkMode";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -22,22 +22,7 @@ const Login = () => {
     window.location.href = "/admin";
   } else {
     return (
-<<<<<<< HEAD
-      <>
-        <div className="container relative mx-auto  dark:text-white h-[80vh] bg-white  px-4 rounded-xl mt-24">
-          <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8 dark:bg-gray-700">
-            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-              <img
-                className="h-10 mx-auto w-22"
-                src="https://anjumanlar.uz/logo.svg"
-                alt="Your Company"
-              />
-              <h2 className="mt-10 text-2xl font-bold leading-9 tracking-tight text-center text-gray-900 dark:text-white">
-                ScienceIDga Xush kelibsiz !
-              </h2>
-            </div>
-=======
-        <div className="container relative mx-auto mt-14 dark:text-white h-[80vh] ">
+        <div className="container relative min-w-full min-h-screen mx-auto dark:text-white dark:bg-gray-900 ">
            <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8 dark:bg-gray-900">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <img
@@ -51,19 +36,8 @@ const Login = () => {
           </div>
   
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form className="space-y-6" action="#" method="POST">
-              <div>
-                
-                <div className="mt-2">
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    value={username}
-          onChange={(e) => setUsername(e.target.value)}
->>>>>>> 47f8ca85f8d6d9bf3b885dd63432fce4e0547d44
+       
+
 
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
               <form className="space-y-6" action="#" method="POST">
@@ -114,26 +88,33 @@ const Login = () => {
                   </div>
                 </div>
 
-                <div>
+                <div className="flex gap-3">
+                  <NavLink className="flex w-full h-[50px] justify-center rounded-md bg-indigo-900 px-4 py-1.2 pt-3  text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" to="/">black</NavLink>
                   <button
-                    type="button"
+                    type="submit"
                     onClick={handleLogin}
                     className="flex w-full h-[50px] justify-center rounded-md bg-indigo-900 px-4 py-1.2 pt-3  text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 "
                   >
                     Sing In
                   </button>
+                  
                 </div>
               </form>
 
               <p className="mt-10 text-sm text-center text-gray-500">
                 Not a member?{"  8"}
               </p>
+              
+              
             </div>
           </div>
         </div>
-      </>
-    );
-  }
-};
+  </div>
+
+
+
+
+    )}}
+ 
 
 export default Login;
