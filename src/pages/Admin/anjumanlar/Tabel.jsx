@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import FormDialog from "./Modal";
 import useAxios from "../../../service/useAxios";
+import Loader from "../../../components/Loader";
 
 export const MuiTable = () => {
   const [page, setPage] = useState(0);
@@ -23,7 +24,7 @@ export const MuiTable = () => {
   const [anjumanlar, setAnjumanlar] = useState([]);
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
 
-  const { data, loading } = useAxios(
+  const { data, loading  } = useAxios(
     "https://6634d6199bb0df2359a2e7ca.mockapi.io/conference/conference"
   );
 
@@ -58,8 +59,8 @@ export const MuiTable = () => {
   return (
     <div className="container justify-end mx-auto ">
       {loading ? (
-        <h1>Loading.....</h1>
-      ) : (
+ <Loader/>
+) : (
         <div>
           <Box
             display="flex"
